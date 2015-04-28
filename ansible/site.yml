@@ -1,0 +1,12 @@
+- hosts: localhost
+  roles:
+    - nodesource.node
+  tasks:
+    - name: Install build-essential
+      apt: name=build-essential state=present
+    - name: Install gulp
+      npm: name=gulp global=yes state=present
+    - name: Install bower
+      npm: name=bower global=yes state=present
+    - name: Add worker user
+      user: name=worker shell=/bin/bash uid=1000
