@@ -9,3 +9,5 @@ RUN ansible-galaxy install -r requirements.yml
 
 # Run Ansible to configure the Docker image
 RUN ansible-playbook site.yml -c local
+
+USER worker
