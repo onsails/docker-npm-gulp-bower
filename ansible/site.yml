@@ -4,6 +4,8 @@
   tasks:
     - name: Install build-essential
       apt: name=build-essential state=present
+    - name: Install git
+      apt: name=git-core state=present
     - name: Install gulp
       npm: name=gulp global=yes state=present
     - name: Install bower
